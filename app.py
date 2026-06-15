@@ -7,6 +7,7 @@ from routes.car_route import car_bp
 from routes.california_route import cali_bp
 from routes.user_route import user_bp
 from routes.item_route import item_bp
+from routes.payment_route import payment_bp
 
 # Flask 애플리케이션 초기화
 app = Flask(__name__)
@@ -19,6 +20,7 @@ app.register_blueprint(car_bp)
 app.register_blueprint(cali_bp)
 app.register_blueprint(user_bp)
 app.register_blueprint(item_bp)
+app.register_blueprint(payment_bp)
 
 @app.route('/health', methods=['GET'])  # 서버 상태 확인하기 위한 엔드포인트
 def health():

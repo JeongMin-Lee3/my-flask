@@ -122,17 +122,18 @@ def create():
         description = data.get('description')
         maker = data.get('maker')
         price = data.get('price')
+        stock_cnt = data.get('stock_cnt')
 
-        if not name or not description or not maker or not price:
+        if not name or not description or not maker or not price or not stock_cnt:
             return jsonify({
                 'success': False,
-                'message': 'name, description, maker, price는 필수입니다.',
+                'message': 'name, description, maker, price, stock_cnt는 필수입니다.',
                 'status_code': 400,
                 'data': None
             })
         db = get_db()
         with db.cursor() as cursor:
-            cursor.execute("INSERT INTO `item` (name, description, maker, price) VALUES (%s, %s, %s, %s)", (name, description, maker, price))
+            cursor.execute("INSERT INTO `item` (name, description, maker, price, stock_cnt) VALUES (%s, %s, %s, %s, %s)", (name, description, maker, price, stock_cnt))
             db.commit()
             return jsonify({   
                 'success': True,
