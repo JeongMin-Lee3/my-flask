@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디자인 페이지</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+</head>
+
+<body>
+    
+    <!-- 상단 헤더 -->
+    <header>
+        <div class="header-inner">
+            <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            
+            <div>
+                <span class="menu">웹디자인</span>
+                <span class="menu">회원가입</span>
+                <span class="menu">로그인</span>
+                <span class="menu">마이페이지</span>
+                <span class="menu">로그아웃</span>
+                <span class="menu">고객센터</span>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- 메인 사진 -->
+    <div class="main-image-container">
+        <img src="{{ url_for('static', filename='images/bg.jpg') }}" alt="main-image">
+
+        <div class="overlay-container">
+            <span class="sub">지역 산업 맞춤형 일자리창출 지원사업</span>
+            <span class="title">실무형 AI/SW 인재 육성 Lab</span>
+        </div>
+    </div>
+
+    <!-- 카드 리스트 컨텐츠 -->
+    <div class="card-list-container">
+        <div class="inner">
+
+
+            <div class="info-card">
+                <div class="info-card-thumb">
+                    <img src="https://cloudimg.ccs.ahnlab.com/img_upload/editor/2501148325790148.png" alt="머신러닝"/>
+                    <span class="info-card-tag">AI 수업</span>
+                </div>
+                <div class="info-card-body">
+                    <span class="info-card-title">머신러닝 · 딥러닝</span>
+                    <p class="info-card-desc">3주간 머신러닝, 딥러닝 수업을 통해 실무 수준의 AI 인재를 양성합니다.</p>
+                    <button class="info-card-btn" type="button">자세히 보기</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-thumb">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop" alt="파이썬 프로그래밍"/>
+                    <span class="info-card-tag">SW 수업</span>
+                </div>
+                <div class="info-card-body">
+                    <span class="info-card-title">Python 기초 프로그래밍</span>
+                    <p class="info-card-desc">데이터 분석과 AI 개발의 기초가 되는 Python 문법과 실습 프로젝트를 학습합니다.</p>
+                    <button class="info-card-btn" type="button">자세히 보기</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-thumb">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="생성형 AI"/>
+                    <span class="info-card-tag">AI 수업</span>
+                </div>
+                <div class="info-card-body">
+                    <span class="info-card-title">생성형 AI 활용 실무</span>
+                    <p class="info-card-desc">ChatGPT, 이미지 생성 AI 등 최신 생성형 AI 도구를 업무에 적용하는 방법을 배웁니다.</p>
+                    <button class="info-card-btn" type="button">자세히 보기</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-thumb">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="데이터 분석"/>
+                    <span class="info-card-tag">데이터</span>
+                </div>
+                <div class="info-card-body">
+                    <span class="info-card-title">데이터 분석 · 시각화</span>
+                    <p class="info-card-desc">Pandas, Matplotlib을 활용해 실제 데이터를 분석하고 인사이트를 도출합니다.</p>
+                    <button class="info-card-btn" type="button">자세히 보기</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-thumb">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="웹 개발"/>
+                    <span class="info-card-tag">SW 수업</span>
+                </div>
+                <div class="info-card-body">
+                    <span class="info-card-title">웹 개발 입문</span>
+                    <p class="info-card-desc">HTML, CSS, JavaScript 기초부터 Flask 백엔드 연동까지 웹 서비스를 직접 만듭니다.</p>
+                    <button class="info-card-btn" type="button">자세히 보기</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-thumb">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="프로젝트"/>
+                    <span class="info-card-tag">프로젝트</span>
+                </div>
+                <div class="info-card-body">
+                    <span class="info-card-title">팀 기반 실전 프로젝트</span>
+                    <p class="info-card-desc">AI·SW 역량을 종합해 팀 프로젝트를 수행하고 포트폴리오를 완성합니다.</p>
+                    <button class="info-card-btn" type="button">자세히 보기</button>
+                </div>
+            </div>
+      
+
+
+
+        </div>
+    </div>
+
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div class="footer-menu-group">
+                <span class="footer-menu-group-title">나의 이력</span>
+                <span>대학교 졸업</span>
+                <span>개발창업</span>
+                <span>풀스택개발자근무</span>
+                <span>여러가지 프로젝트 참여</span>
+            </div>
+    
+            <div class="footer-menu-group">
+                <span class="footer-menu-group-title">기술 스택</span>
+                <span>Spring Framework</span>
+                <span>html / css/ js </span>
+                <span>Linux 서버</span>
+                <span>mySQL</span>
+            </div>
+    
+            <div class="footer-menu-group">
+                <span class="footer-menu-group-title">나의 취미</span>
+                <span>카페에서 개발하기</span>
+                <span>주말 축구하기</span>
+                <span>영화보기</span>
+                <span>혼자산책</span>
+            </div>
+
+        </div>
+        
+    </footer>
+
+
+</body>
+</html>
